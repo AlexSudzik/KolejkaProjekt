@@ -52,6 +52,8 @@ namespace KolejkaProjekt
             this.OsobaPo = new System.Windows.Forms.Label();
             this.LabelDodawanie = new System.Windows.Forms.Label();
             this.UsunButton = new System.Windows.Forms.Button();
+            this.CofnijButton = new System.Windows.Forms.Button();
+            this.DalejButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Imie1
@@ -221,11 +223,31 @@ namespace KolejkaProjekt
             this.UsunButton.Text = "Usuń";
             this.UsunButton.UseVisualStyleBackColor = true;
             // 
+            // CofnijButton
+            // 
+            this.CofnijButton.Location = new System.Drawing.Point(604, 192);
+            this.CofnijButton.Name = "CofnijButton";
+            this.CofnijButton.Size = new System.Drawing.Size(75, 23);
+            this.CofnijButton.TabIndex = 20;
+            this.CofnijButton.Text = "Cofnij";
+            this.CofnijButton.UseVisualStyleBackColor = true;
+            // 
+            // DalejButton
+            // 
+            this.DalejButton.Location = new System.Drawing.Point(604, 333);
+            this.DalejButton.Name = "DalejButton";
+            this.DalejButton.Size = new System.Drawing.Size(75, 23);
+            this.DalejButton.TabIndex = 21;
+            this.DalejButton.Text = "Dalej";
+            this.DalejButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1367, 556);
+            this.Controls.Add(this.DalejButton);
+            this.Controls.Add(this.CofnijButton);
             this.Controls.Add(this.UsunButton);
             this.Controls.Add(this.LabelDodawanie);
             this.Controls.Add(this.OsobaPo);
@@ -278,6 +300,8 @@ namespace KolejkaProjekt
         private System.Windows.Forms.Label OsobaPo;
         private System.Windows.Forms.Label LabelDodawanie;
         private System.Windows.Forms.Button UsunButton;
+        private System.Windows.Forms.Button CofnijButton;
+        private System.Windows.Forms.Button DalejButton;
     }
 }
 
