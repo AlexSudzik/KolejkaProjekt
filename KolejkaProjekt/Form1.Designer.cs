@@ -240,6 +240,7 @@ namespace KolejkaProjekt
             this.DalejButton.TabIndex = 21;
             this.DalejButton.Text = "Dalej";
             this.DalejButton.UseVisualStyleBackColor = true;
+            this.DalejButton.Click += new System.EventHandler(this.DalejButton_Click);
             // 
             // Form1
             // 
