@@ -16,13 +16,19 @@ namespace KolejkaProjekt
         private List<string> nazwyBadan = new List<string>(10);
         private List<string> datyBadan = new List<string>(10);
 
-        private int imiex = 1;
-        private int nazwax = 1;
-        private int datax = 1;
+        private int imiex = 0;
+        private int nazwax = 0;
+        private int datax = 0;
 
 
         public Form1()
         {
+
+
+
+            //https://www.c-sharpcorner.com/article/c-sharp-list/
+
+
 
             InitializeComponent();
             DataTeraz.Text = DateTime.Now.Date.ToShortDateString();
@@ -40,9 +46,9 @@ namespace KolejkaProjekt
             imiona.Add("Tyler Ferrar");
             imiona.Add("Wladyslaw Maka");
             imiona.Add("Leon Moneta");
-            OsobaPrzedImie.Text = imiona[1];
-            OsobaTerazImie.Text = imiona[2];
-            OsobaPoImie.Text = imiona[3];
+            OsobaPrzedImie.Text = imiona[0];
+            OsobaTerazImie.Text = imiona[1];
+            OsobaPoImie.Text = imiona[2];
 
             nazwyBadan.Add("Morfologia");
             nazwyBadan.Add("Glukoza");
@@ -54,9 +60,9 @@ namespace KolejkaProjekt
             nazwyBadan.Add("Pobieranie krwi");
             nazwyBadan.Add("Szczepienie");
             nazwyBadan.Add("Chemioterapia");
-            OsobaPrzedNazwaBadania.Text = nazwyBadan[1];
-            OsobaTerazNazwaBadania.Text = nazwyBadan[2];
-            OsobaPoNazwaBadania.Text = nazwyBadan[3];
+            OsobaPrzedNazwaBadania.Text = nazwyBadan[0];
+            OsobaTerazNazwaBadania.Text = nazwyBadan[1];
+            OsobaPoNazwaBadania.Text = nazwyBadan[2];
 
             datyBadan.Add("21.10.21");
             datyBadan.Add("22.10.21");
@@ -69,9 +75,9 @@ namespace KolejkaProjekt
             datyBadan.Add("20.11.21");
             datyBadan.Add("25.11.21");
 
-            OsobaPrzedDataBadania.Text = datyBadan[1];
-            OsobaTerazDataBadania.Text = datyBadan[2];
-            OsobaPoDataBadania.Text = datyBadan[3];
+            OsobaPrzedDataBadania.Text = datyBadan[0];
+            OsobaTerazDataBadania.Text = datyBadan[1];
+            OsobaPoDataBadania.Text = datyBadan[2];
 
            
 
@@ -128,27 +134,34 @@ namespace KolejkaProjekt
 
         private void DalejButton_Click(object sender, EventArgs e)
         {
+            
+            
             imiex += 1;
+            OsobaPrzedImie.Text = imiona[imiex] + " " + imiex;
+            imiex += 1;
+            OsobaTerazImie.Text = imiona[imiex] + " " + imiex;
+            imiex += 1;
+            OsobaPoImie.Text = imiona[imiex] + " " + imiex;
+
+
+
+
             nazwax += 1;
+            OsobaPrzedNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax += 1;
+            OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax += 1;
+            OsobaPoNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+
             datax += 1;
-
-            OsobaPrzedImie.Text = imiona[imiex];
-            imiex += 1;
-            OsobaTerazImie.Text = imiona[imiex];
-            imiex += 1;
-            OsobaPoImie.Text = imiona[imiex];
-
+            OsobaPrzedDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax += 1;
+            OsobaTerazDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax += 1;
+            OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
 
 
-            OsobaPrzedNazwaBadania.Text = nazwyBadan[nazwax];
-            nazwax += 1;
-            OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax];
-            nazwax += 1;
-            OsobaPoNazwaBadania.Text = nazwyBadan[nazwax];
 
-           // OsobaPrzedDataBadania = datyBadan[datax];
-
-           
         }
     }
 }
