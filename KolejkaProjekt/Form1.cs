@@ -25,7 +25,6 @@ namespace KolejkaProjekt
         {
 
 
-
             //https://www.c-sharpcorner.com/article/c-sharp-list/
 
 
@@ -42,7 +41,7 @@ namespace KolejkaProjekt
             imiona.Add("Hubert Bubert");
             imiona.Add("Alojizy Cegla");
             imiona.Add("Juliusz Cezar");
-            imiona.Add("Oliwier Gnebliciel");
+            imiona.Add("Oli Gnebiciel");
             imiona.Add("Tyler Ferrar");
             imiona.Add("Wladyslaw Maka");
             imiona.Add("Leon Moneta");
@@ -142,6 +141,7 @@ namespace KolejkaProjekt
             OsobaTerazImie.Text = imiona[imiex] + " " + imiex;
             imiex += 1;
             OsobaPoImie.Text = imiona[imiex] + " " + imiex;
+            imiex -=2;
 
 
 
@@ -152,6 +152,7 @@ namespace KolejkaProjekt
             OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
             nazwax += 1;
             OsobaPoNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax -=2;
 
             datax += 1;
             OsobaPrzedDataBadania.Text = datyBadan[datax] + " " + datax;
@@ -159,6 +160,7 @@ namespace KolejkaProjekt
             OsobaTerazDataBadania.Text = datyBadan[datax] + " " + datax;
             datax += 1;
             OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax -=2;
 
 
 
