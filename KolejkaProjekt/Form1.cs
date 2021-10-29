@@ -106,7 +106,13 @@ namespace KolejkaProjekt
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OsobaPrzedNazwaBadania.Text = nazwyBadan[0];
+            OsobaTerazNazwaBadania.Text = nazwyBadan[1];
+            OsobaPoNazwaBadania.Text = nazwyBadan[2];
 
+            datyBadan.Add(DataBadania.Text);
+            nazwyBadan.Add(NazwaBadania.Text);
+            imiona.Add(Imie1.Text);
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -133,18 +139,14 @@ namespace KolejkaProjekt
 
         private void DalejButton_Click(object sender, EventArgs e)
         {
-            
-            
+
             imiex += 1;
             OsobaPrzedImie.Text = imiona[imiex] + " " + imiex;
             imiex += 1;
             OsobaTerazImie.Text = imiona[imiex] + " " + imiex;
             imiex += 1;
             OsobaPoImie.Text = imiona[imiex] + " " + imiex;
-            imiex -=2;
-
-
-
+            imiex -= 2;
 
             nazwax += 1;
             OsobaPrzedNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
@@ -152,7 +154,7 @@ namespace KolejkaProjekt
             OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
             nazwax += 1;
             OsobaPoNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
-            nazwax -=2;
+            nazwax -= 2;
 
             datax += 1;
             OsobaPrzedDataBadania.Text = datyBadan[datax] + " " + datax;
@@ -160,9 +162,109 @@ namespace KolejkaProjekt
             OsobaTerazDataBadania.Text = datyBadan[datax] + " " + datax;
             datax += 1;
             OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
-            datax -=2;
+            datax -= 2;
+            /*
+            int dlugosc1 = imiona.Count;
+            DataTeraz.Text = dlugosc1.ToString();
 
 
+            if(imiex < dlugosc1)
+            {
+                imiex += 1;
+                OsobaPrzedImie.Text = imiona[imiex] + " " + imiex;
+                imiex -= 1;
+                if(imiex < dlugosc1)
+                {
+                    imiex += 2;
+                    OsobaTerazImie.Text = imiona[imiex] + " " + imiex;
+                    imiex -= 2;
+                    if (imiex < dlugosc1)
+                    {
+                        imiex += 3;
+                        OsobaPoImie.Text = imiona[imiex] + " " + imiex;
+                        imiex -= 3;
+
+                    }
+                }
+            }
+
+            if (nazwax < dlugosc1)
+            {
+                nazwax += 1;
+                OsobaPrzedNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+                nazwax -= 1;
+                if (nazwax < dlugosc1)
+                {
+                    nazwax += 2;
+                    OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+                    nazwax -= 2;
+                    if (nazwax < dlugosc1)
+                    {
+                        nazwax += 3;
+                        OsobaPoNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+                        nazwax -= 3;
+
+                    }
+                }
+            }
+
+            if (datax < dlugosc1)
+            {
+                datax += 1;
+                OsobaPrzedDataBadania.Text = datyBadan[datax] + " " + datax;
+                datax -= 1;
+                if (datax < dlugosc1)
+                {
+                    datax += 2;
+                    OsobaTerazDataBadania.Text = datyBadan[datax] + " " + datax;
+                    datax -= 2;
+                    if (datax < dlugosc1)
+                    {
+                        datax += 3;
+                        OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
+                        datax -= 3;
+
+                    }
+                }
+            }
+            */
+        }
+
+            private void CofnijButton_Click(object sender, EventArgs e)
+        {
+
+            imiex -= 1;
+            OsobaPoImie.Text = imiona[imiex] + " " + imiex;
+            imiex -= 1;
+            OsobaTerazImie.Text = imiona[imiex] + " " + imiex;
+            imiex -= 1;
+            OsobaPrzedImie.Text = imiona[imiex] + " " + imiex;
+            imiex += 2;
+
+            nazwax -= 1;
+            OsobaPoNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax -= 1;
+            OsobaTerazNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax -= 1;
+            OsobaPrzedNazwaBadania.Text = nazwyBadan[nazwax] + " " + nazwax;
+            nazwax += 2;
+
+            datax -= 1;
+            OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax -= 1;
+            OsobaTerazDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax -= 1;
+            OsobaPrzedDataBadania.Text = datyBadan[datax] + " " + datax;
+            datax += 2;
+
+        }
+
+        private void UsunButton_Click(object sender, EventArgs e)
+        {
+
+            imiona.RemoveAt(1);
+            nazwyBadan.RemoveAt(1);
+            datyBadan.RemoveAt(1);
 
         }
     }

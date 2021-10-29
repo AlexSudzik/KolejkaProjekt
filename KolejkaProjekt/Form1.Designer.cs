@@ -222,6 +222,7 @@ namespace KolejkaProjekt
             this.UsunButton.TabIndex = 19;
             this.UsunButton.Text = "Usuń";
             this.UsunButton.UseVisualStyleBackColor = true;
+            this.UsunButton.Click += new System.EventHandler(this.UsunButton_Click);
             // 
             // CofnijButton
             // 
@@ -231,6 +232,7 @@ namespace KolejkaProjekt
             this.CofnijButton.TabIndex = 20;
             this.CofnijButton.Text = "Cofnij";
             this.CofnijButton.UseVisualStyleBackColor = true;
+            this.CofnijButton.Click += new System.EventHandler(this.CofnijButton_Click);
             // 
             // DalejButton
             // 
