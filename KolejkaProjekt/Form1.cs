@@ -25,8 +25,11 @@ namespace KolejkaProjekt
         {
 
 
-            //https://www.c-sharpcorner.com/article/c-sharp-list/
-
+            //=====================================================================================
+            //Chodzenie dziala, ale crashuje kiedy sie wyjdzie poza dlugosc kolejki
+            //usuwanie dziala, ale nie update'uje sie od razu, tylko po kliknieciu dalej lub cofnij
+            //dodawanie dziala normalnie
+            //=====================================================================================
 
 
             InitializeComponent();
@@ -35,16 +38,16 @@ namespace KolejkaProjekt
 
            
 
-            imiona.Add("Jan Kowalski");
-            imiona.Add("Adam Nowak");
-            imiona.Add("Stefan Cebula");
-            imiona.Add("Hubert Bubert");
-            imiona.Add("Alojizy Cegla");
-            imiona.Add("Juliusz Cezar");
-            imiona.Add("Oli Gnebiciel");
-            imiona.Add("Tyler Ferrar");
-            imiona.Add("Wladyslaw Maka");
-            imiona.Add("Leon Moneta");
+            imiona.Add("1 Jan Kowalski");
+            imiona.Add("2 Adam Nowak");
+            imiona.Add("3 Stefan Cebula");
+            imiona.Add("4 Hubert Bubert");
+            imiona.Add("5 Alojizy Cegla");
+            imiona.Add("6 Juliusz Cezar");
+            imiona.Add("7 Oli Gnebiciel");
+            imiona.Add("8 Tyler Ferrar");
+            imiona.Add("9 Wladyslaw Maka");
+            imiona.Add("10 Leon Moneta");
             OsobaPrzedImie.Text = imiona[0];
             OsobaTerazImie.Text = imiona[1];
             OsobaPoImie.Text = imiona[2];
@@ -140,6 +143,10 @@ namespace KolejkaProjekt
         private void DalejButton_Click(object sender, EventArgs e)
         {
 
+
+
+
+
             imiex += 1;
             OsobaPrzedImie.Text = imiona[imiex] + " " + imiex;
             imiex += 1;
@@ -163,6 +170,7 @@ namespace KolejkaProjekt
             datax += 1;
             OsobaPoDataBadania.Text = datyBadan[datax] + " " + datax;
             datax -= 2;
+
             /*
             int dlugosc1 = imiona.Count;
             DataTeraz.Text = dlugosc1.ToString();
@@ -227,6 +235,7 @@ namespace KolejkaProjekt
                     }
                 }
             }
+
             */
         }
 
@@ -262,9 +271,9 @@ namespace KolejkaProjekt
         private void UsunButton_Click(object sender, EventArgs e)
         {
 
-            imiona.RemoveAt(1);
-            nazwyBadan.RemoveAt(1);
-            datyBadan.RemoveAt(1);
+            imiona.RemoveAt(imiex + 1);
+            nazwyBadan.RemoveAt(nazwax + 1);
+            datyBadan.RemoveAt(datax + 1);
 
         }
     }
